@@ -6,22 +6,19 @@ class HueyTheQueue {
     this.q = []
   }
 
-  enQ(msg) {
-    console.log(`Enqueuing message: ${msg}`)
-    return this.q.push(msg)
+  enQ(...msgs) {
+    return this.q.push(...msgs)
   }
 
   deQ() {
     if (this.q.length > 0) {
       const msg = this.q.shift()
-      console.log(`Dequeuing message: ${msg}`)
       return msg
     }
-    console.log('Queue is empty.')
     return null
   }
 
-  peep() {
+  peek() {
     return this.q[0]
   }
 
