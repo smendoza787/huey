@@ -4,5 +4,11 @@
   "description": "Huey the queue, a simple queue implementation in javascript.",
   "main": "index.js",
   "author": "Sergio Mendoza",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }

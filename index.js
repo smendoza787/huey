@@ -12,29 +12,22 @@ class HueyTheQueue {
   }
 
   deQ() {
-    console.log(`Dequeuing message: ${x}`)
-    return this.q.shift()
+    if (this.q.length > 0) {
+      const msg = this.q.shift()
+      console.log(`Dequeuing message: ${msg}`)
+      return msg
+    }
+    console.log('Queue is empty.')
+    return null
   }
 
   peep() {
     return this.q[0]
   }
+
+  length() {
+    return this.q.length
+  }
 }
 
-const q = new HueyTheQueue()
-
-q.enQ('first item')
-q.enQ('second item')
-q.enQ('third item')
-
-console.log()
-console.log('===')
-console.log('======')
-console.log('=========')
-console.log()
-console.log('Peeping: ', q.peep())
-console.log()
-console.log('=========')
-console.log('======')
-console.log('===')
-console.log()
+module.exports = HueyTheQueue
