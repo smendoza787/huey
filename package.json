@@ -1,0 +1,8 @@
+{
+  "name": "huey",
+  "version": "0.1.0",
+  "description": "Huey the queue, a simple queue implementation in javascript.",
+  "main": "index.js",
+  "author": "Sergio Mendoza",
+  "license": "MIT"
+}
